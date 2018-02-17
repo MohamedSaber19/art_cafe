@@ -1,0 +1,30 @@
+
+<ion-header>
+
+    <ion-navbar style="background: url('img/blue.png') !important;color:white !important;">
+        <ion-title style="background: url('img/blue.png') !important;color:white !important;">Classes</ion-title>
+    </ion-navbar>
+    <ion-searchbar
+    [(ngModel)]="myInput"
+    [showCancelButton]="shouldShowCancel"
+    (ionInput)="onInput($event)"
+    (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+</ion-header>
+
+
+<ion-content>
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content pullingIcon="arrow-dropdown"
+                pullingText="Pull to refresh"
+                refreshingSpinner="circles"
+                refreshingText="Refreshing...">></ion-refresher-content>
+              </ion-refresher>
+    <ion-card *ngFor="let cat of items" (click)="goPackages(cat.id)">
+        <img src="{{cat.picture}}">
+        <ion-card-content>
+            <ion-card-title>{{cat.title}}</ion-card-title>
+            <p>{{cat.short_description}}</p>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

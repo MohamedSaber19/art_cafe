@@ -1,0 +1,62 @@
+
+<ion-header>
+    
+        <ion-navbar style="background: url('img/blue.png') !important;color:white !important;">
+            <ion-title style="background: url('img/blue.png') !important;color:white !important;">Classes</ion-title>
+        </ion-navbar>
+    
+    </ion-header>
+
+
+<ion-content>
+    <div>
+        <ion-segment color="primary" [(ngModel)]="choice">
+            <ion-segment-button value="Cairo">
+                Maadi Branch
+            </ion-segment-button>
+            <ion-segment-button value="Giza">
+                Zayed Branch
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div [ngSwitch]="choice">
+        <ion-list class="classes" *ngSwitchCase="'Cairo'">
+
+            <ion-item *ngIf="!myMaadi[0]" text-center>
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+                <p>No classes to show, click on calendar to show classes in Maadi branch</p>
+            </ion-item>
+            <div *ngFor="let class of myMaadi">
+                <ion-item>
+                    <strong (click)="goDet(class)" ion-text color="primary">{{class.day_week}} {{class.start_time}} - {{class.end_time}}</strong>
+                    <p (click)="goDet(class)" ion-text color="primary">{{class.title}}</p>
+                    <p (click)="goDet(class)" ion-text color="dark">{{class.instructor}}</p>
+                    <p (click)="goDet(class)">{{class.description}}</p>
+                    <div tappable class="bookSection" (click)="goBook(class)" item-end>Book</div>
+                </ion-item>
+            </div>
+        </ion-list>
+        <ion-list *ngSwitchCase="'Giza'">
+            <ion-item *ngIf="!myZayed[0]" text-center>
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+                <p>No classes to show ,click on calendar to show classes in Zayed branch</p>
+            </ion-item>
+            <div *ngFor="let class of myZayed">
+                <ion-item *ngIf="!myZayed[0]">
+                    <p>There're no classes at that day try another one !</p>
+                </ion-item>
+                <ion-item>
+                    <strong (click)="goDet(class)" ion-text color="primary">{{class.start_time}}-{{class.end_time}}</strong>
+                    <p (click)="goDet(class)" ion-text color="primary">{{class.title}}</p>
+                    <p (click)="goDet(class)" ion-text color="dark">{{class.instructor}}</p>
+                    <p (click)="goDet(class)">{{class.description}}</p>
+                    <div tappable class="bookSection" (click)="goBook(class)" item-end>Book</div>
+                </ion-item>
+            </div>
+        </ion-list>
+    </div>
+</ion-content>
+<!-- <ion-footer>
+    <button block ion-button (click)="showSpinner()">Test spinner ios</button>
+    <button block ion-button (click)="showSpinnerAnd()">Test spinner android</button>
+</ion-footer> -->

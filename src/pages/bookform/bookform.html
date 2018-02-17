@@ -1,0 +1,51 @@
+<!--
+  Generated template for the BookformPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar style="background: url('img/yellow.png') !important;color:white !important;">
+        <ion-title style="background: url('img/yellow.png') !important;color:white !important;">{{myBook.title}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <p padding color="light">Please fill the form to book your event</p>
+    <form [formGroup]="bookingForm" novalidate (ngSubmit)="subForm(bookingForm.value)">
+        <ion-list>
+
+            <ion-item>
+                <ion-label stacked color="light">Name</ion-label>
+                <ion-input required formControlName="name" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked color="light">Date</ion-label>
+                <ion-datetime max="2050-12-31" displayFormat="DD/MM/YYYY" pickerFormat="DD MM YYYY" required formControlName="date"></ion-datetime>
+                <!-- <ion-input required formControlName="date" type="date"></ion-input> -->
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked color="light">Number of invitees</ion-label>
+                <ion-input required formControlName="invitees" type="number"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked color="light">Branch</ion-label>
+                <ion-select required formControlName="location">
+                    <ion-option value="Zayed">Zayed</ion-option>
+                    <ion-option value="Maadi">Maadi</ion-option>
+                </ion-select>
+            </ion-item>
+
+        </ion-list>
+        <div text-center>
+            <button ion-button [disabled]="!bookingForm.valid" class="rounded" color="dark">Submit</button>
+
+        </div>
+    </form>
+</ion-content>

@@ -1,0 +1,65 @@
+page-allprograms {
+  #classes {
+    color: color($colors, primary) !important;
+  }
+  #classes.segment-activated {
+    background-color: color($colors, primary);
+    color: white !important;
+  }
+  #drops {
+    color: color($colors, secondary) !important;
+  }
+  #drops.segment-activated {
+    background-color: color($colors, secondary);
+    color: white !important;
+  }
+  #clubs {
+    color: color($colors, danger) !important;
+  }
+  #clubs.segment-activated {
+    background-color: color($colors, danger);
+    color: white !important;
+  }
+  .bookSection {
+    margin: 0px !important;
+    padding: 10px 20px;
+    height: 60%;
+    color: white;
+    background: #d12c75;
+    padding-top: 20px;
+  }
+  .item-inner {
+    padding-right: 0px !important;
+  }
+  .classes {
+    ion-card {
+      img {
+        border-radius: 50%;
+        width: 80px !important;
+        height: 80px !important;
+        padding: 10px;
+        display: inline-block;
+      }
+    }
+  }
+  .wrapper {
+    background: #EFEFEF;
+    box-shadow: 1px 1px 10px #999;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px !important;
+    width: auto;
+    padding-top: 5px;
+  }
+  .scrolls {
+    padding: 5px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: auto;
+    white-space: nowrap
+  }
+}

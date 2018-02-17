@@ -1,0 +1,44 @@
+page-sessions {
+    .wrapper {
+        background: #EFEFEF;
+        box-shadow: 1px 1px 10px #999;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        margin-bottom: 20px !important;
+        width: auto;
+        padding-top: 5px;
+    }
+    .bookSection{
+        margin: 0px !important;
+        padding: 10px 20px;
+        height: 100%;
+        color: white;
+        background: #d12c75;
+        padding-top: 20px;
+    }
+    .scrolls {
+        padding: 5px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: auto;
+        white-space: nowrap
+    }
+    .date {
+        padding: 5px;
+        box-shadow: 1px 1px 10px #999;
+        margin: 2px;
+        max-height: 50px;
+        cursor: pointer;
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        vertical-align: top;
+    }
+    .item-inner{
+        padding-right: 0px !important;
+    }
+}

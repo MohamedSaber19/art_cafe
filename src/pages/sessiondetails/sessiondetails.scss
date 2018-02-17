@@ -1,0 +1,11 @@
+page-sessiondetails {
+    .myTitle {
+        color: #d12c75;
+    }
+    .list-ios>.item-radio-checked {
+        color: #d12c75 !important;
+    }
+    input[type=radio]:checked {
+        color: #d12c75 !important;
+    }
+}

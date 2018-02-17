@@ -1,5 +1,98 @@
-// http://ionicframework.com/docs/theming/
+// http://ionicframework.com/docs/v2/theming/
+.toolbar-title-ios,
+.toolbar-title {
+    color: white !important;
+}
+.noWrap{
+    white-space: normal !important;
+}
+.settingBtn{
+    background: darkcyan !important;
+    color:white !important;
+}
+.noDecor{
+    text-decoration: none;
+}
+.dots {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+.dots::after {
+    content: ' more';
+}
+
+ion-footer {
+    button {
+        border-radius: unset !important;
+        margin: unset !important;
+    }
+}
+
+.toolbar-ios-light .toolbar-title-ios,
+.toolbar-ios-light .bar-button-clear-ios,
+.bar-button-clear-android,
+.toolbar-ios-light .bar-button-default-ios {
+    color: white !important;
+}
+
+.toolbar-background {
+    background: none !important;
+}
+
+.smText {
+    font-size: 10px;
+    color: #ccc;
+}
+
+.back-button-ios,
+.back-button {
+    color: white !important;
+}
+
+.myTitle {
+    color: #1380ad;
+}
+
+a#tab-t0-0 {
+    color: #1380ad !important;
+    ion-icon {
+        color: #1380ad !important;
+    }
+}
+
+a#tab-t0-1 {
+    color: #d12c75 !important;
+    ion-icon {
+        color: #d12c75 !important;
+    }
+}
+
+a#tab-t0-2 {
+    color: #b2a116 !important;
+    ion-icon {
+        color: #b2a116 !important;
+    }
+}
+
+a#tab-t0-3 {
+    color: darkcyan !important;
+    ion-icon {
+        color: darkcyan !important;
+    }
+}
+
+a#tab-t0-4 {
+    color: #83aa49 !important;
+    ion-icon {
+        color: #83aa49 !important;
+    }
+}
+
+.rounded {
+    border-radius: 20px;
+}
 
 // App Global Sass
 // --------------------------------------------------

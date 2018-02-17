@@ -1,0 +1,32 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar style="background: darkcyan !important;color:white !important;">
+        <ion-title style="background: darkcyan !important;color:white !important;">Settings</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-content>
+        <ion-item-group>
+            <ion-item-divider color="darkCyan">Account Preferences</ion-item-divider>
+            <ion-item (click)="changeEmail()">Change Email</ion-item>
+            <ion-item (click)="changePassword()">Change Password</ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="darkCyan">App Preferences</ion-item-divider>
+            <ion-item (click)="goTerms()">Terms & Conditions</ion-item>
+            <ion-item (click)="goAbout()">About Us</ion-item>
+            <ion-item (click)="goContact()">Contact Us</ion-item>
+            <ion-item (click)="logOut()" tappable>
+                <ion-icon name="log-out"></ion-icon> Log out</ion-item>
+        </ion-item-group>
+    </ion-content>
+</ion-content>

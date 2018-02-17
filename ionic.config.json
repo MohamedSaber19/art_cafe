@@ -1,6 +1,6 @@
 {
-  "name": "artCafe",
-  "app_id": "",
+  "name": "art_cafe",
+  "app_id": "adb67f90",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ClubsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar style="background: url('img/purple.png') !important;color:white !important;">
+        <ion-title style="background: url('img/purple.png') !important;color:white !important;">Studios</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div class="wrapper">
+        <div class="scrolls">
+            <button ion-button *ngFor="let d of sessions" color={{d.color}} class="date" (click)="pickDate(d)">{{d.day}}<br>{{d.date}}
+                    </button>
+        </div>
+    </div>
+    <div>
+        <ion-segment color="danger" [(ngModel)]="choice">
+            <ion-segment-button value="Cairo">
+                Maadi Branch
+            </ion-segment-button>
+            <ion-segment-button value="Giza">
+                Zayed Branch
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div [ngSwitch]="choice">
+        <ion-list *ngSwitchCase="'Cairo'">
+            <ion-item *ngIf="!myMaadi[0]" text-center>
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+                <p>No studios to show ,click on calendar to show studios in Maadi branch</p>
+            </ion-item>
+            <ion-item *ngFor="let d of myMaadi">
+                <strong (click)="goBook(d)" ion-text color="danger">{{d.start_time}}-{{d.end_time}}</strong>
+                <p ion-text color="danger" (click)="goBook(d)">{{d.title}}</p>
+                <p ion-text color="dark" (click)="goBook(d)">{{d.instructor}}</p>
+                <p (click)="goBook(d)">{{d.description}}</p>
+                <div tappable class="bookSection" (click)="goBook(d)" item-end>Book</div>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngSwitchCase="'Giza'">
+            <ion-item *ngIf="!myZayed[0]" text-center>
+                <ion-icon name="ios-information-circle-outline"></ion-icon>
+                <p>No studios to show ,click on calendar to show studios in Zayed branch</p>
+            </ion-item>
+            <ion-item *ngFor="let sess of myZayed">
+                <strong (click)="goBook(sess)" ion-text color="danger">{{sess.start_time}}-{{sess.end_time}}</strong>
+                <p ion-text color="danger" (click)="goBook(sess)">{{sess.title}}</p>
+                <p ion-text color="dark" (click)="goBook(sess)">{{sess.instructor}}</p>
+                <p (click)="goBook(sess)">{{sess.description}}</p>
+                <div tappable class="bookSection" (click)="goBook(sess)" item-end>Book</div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,27 @@
+page-classdetails {
+.price{
+    background: color($colors,primary);
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.deadline b,{
+    color:red;
+    font-size:20px;
+}
+.counter b{
+    color:green;
+    font-size:20px;
+}
+.firstSec{
+    ion-col{
+        padding:0px !important;
+    }
+}
+.secondSec{
+    border:1px solid color($colors,primary);
+    
+}
+}

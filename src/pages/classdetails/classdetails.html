@@ -1,0 +1,37 @@
+
+<ion-header>
+
+    <ion-navbar style="background: url('img/blue.png') !important;color:white !important;">
+        <ion-title style="background: url('img/blue.png') !important;color:white !important;">{{myClass.title}}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row class="firstSec" text-center>
+        <ion-col>
+            <img src="{{myClass.picture}}">
+            <span *ngIf="myClass.picture" class="price">EGP {{myClass.price_to_book}}</span>
+        </ion-col>
+    </ion-row>
+    <ion-row class="secondSec">
+        <ion-col text-center>
+            <span class="counter"><b>{{myClass.remaining_slots}}/{{myClass.available_slots}}</b><br> slots available</span>
+        </ion-col>
+        <ion-col text-center>
+            <span class="deadline"><b>{{myClass.deadline_for_booking_in_days}} days left</b><br> before the deadline</span>
+        </ion-col>
+    </ion-row>
+
+    <br>
+    <strong class="myTitle">Description</strong>
+    <p>{{myClass.description}}</p>
+    <strong class="myTitle">Date</strong>
+    <p>{{myClass.start_date}} to {{myClass.end_date}}</p>
+    <strong class="myTitle">Time</strong>
+    <p >{{myClass.day_week}} {{myClass.start_time}} - {{myClass.end_time}}</p>
+    <strong class="myTitle">Instructor</strong>
+    <p>{{myClass.instructor}}</p>
+    <button class="button-md" ion-button block rounded color="primary" (click)="bookClass(myClass)">Confirm & Book</button>
+</ion-content>

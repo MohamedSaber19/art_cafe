@@ -1,14 +1,84 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar style="background: url('img/purple.png') !important;color:white !important;">
+        <ion-title style="background: url('img/purple.png') !important;color:white !important;">Home</ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+    <p class="myTitle">Recent Classes</p><br>
+    <ion-slides class="recentQues">
+        <ion-slide>
+            <ion-card text-center padding>
+                <img src="img/prog1.jpg">
+                <h1>Coal Painting Class</h1>
+                <p>This program contains alot of skills to be taught</p>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card text-center padding>
+                <img src="img/prog2.jpg">
+                <h1>Oil Painting Class</h1>
+                <p>This program contains alot of skills to be taught</p>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card text-center padding>
+                <img src="img/prog3.jpg">
+                <h1>Portrait Painting Class</h1>
+                <p>This program contains alot of skills to be taught</p>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <p class="myTitle">Latest News</p>
+    <ion-slides class="recentQues">
+        <ion-slide>
+            <ion-card text-left padding>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card text-left padding>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card text-left padding>
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+    <p class="myTitle">Announcements</p>
+    <ion-row>
+        <ion-col col-9>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </ion-col>
+        <ion-col col-3 ion-text color="danger" text-right>
+            <p class="smText">12:00 PM</p>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-9>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </ion-col>
+        <ion-col col-3 ion-text color="danger" text-right>
+            <p class="smText">12:00 PM</p>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-9>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </ion-col>
+        <ion-col col-3 ion-text color="danger" text-right>
+            <p class="smText">12:00 PM</p>
+        </ion-col>
+    </ion-row>
 </ion-content>
+<!-- <ion-footer>
+    <button ion-button block color="danger" (click)="goDrop()">Drop-ins</button>
+    <p padding text-center style="border-top:1px solid #d12c75;margin:0;" ion-text color="danger" (click)="goSessions()">Art Cafe Club</p>
+</ion-footer> -->

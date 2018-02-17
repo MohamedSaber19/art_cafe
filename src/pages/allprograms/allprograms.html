@@ -1,0 +1,150 @@
+<!--
+  Generated template for the AllprogramsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar style="background: url('img/blue.png') !important;color:white !important;">
+    <ion-title style="background: url('img/blue.png') !important;color:white !important;">Classes, Clubs, and Events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div padding>
+    <ion-segment color="dark" [(ngModel)]="choice">
+      <ion-segment-button id="classes" value="Classes">
+        Classes
+      </ion-segment-button>
+      <ion-segment-button id="clubs" value="Clubs">
+        Clubs
+      </ion-segment-button>
+      <ion-segment-button id="drops" value="Drops">
+        Events
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div [ngSwitch]="choice">
+    <ion-list class="classes" *ngSwitchCase="'Classes'">
+        <ion-item-divider color="light">Cairo Branch</ion-item-divider>
+      <ion-item *ngFor="let class of classes" (click)="goDet(class)">
+        <strong>{{class.time}}</strong>
+        <p ion-text color="danger">{{class.name}}</p>
+        <p ion-text color="dark">{{class.instructor}}</p>
+        <p class="dots">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+      </ion-item>
+      <ion-item-divider color="light">Giza Branch</ion-item-divider>
+      <ion-item *ngFor="let class of classes" (click)="goDet(class)">
+          <strong>{{class.time}}</strong>
+          <p ion-text color="danger">{{class.name}}</p>
+          <p ion-text color="dark">{{class.instructor}}</p>
+          <p class="dots">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+        </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Clubs'">
+      <div class="wrapper">
+        <div class="scrolls">
+          <button ion-button *ngFor="let d of dates" color={{d.color}} class="date" (click)="pickDate(d)">{{d.day}}<br>{{d.date}}
+                        </button>
+        </div>
+      </div>
+      <ion-list>
+        <ion-item-divider color="light">Cairo Branch</ion-item-divider>
+        <ion-item *ngFor="let sess of sessions">
+          <strong (click)="sessDet(sess)">{{sess.time}}</strong>
+          <p ion-text color="danger" (click)="sessDet(sess)">{{sess.name}}</p>
+          <p ion-text color="dark" (click)="sessDet(sess)">{{sess.instructor}}</p>
+          <p class="dots" (click)="sessDet(sess)">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+          <div tappable class="bookSection" (click)="goBook(sess)" item-end>Book</div>
+        </ion-item>
+        <ion-item-divider color="light">Giza Branch</ion-item-divider>
+        <ion-item *ngFor="let sess of sessions">
+          <strong (click)="sessDet(sess)">{{sess.time}}</strong>
+          <p ion-text color="danger" (click)="sessDet(sess)">{{sess.name}}</p>
+          <p ion-text color="dark" (click)="sessDet(sess)">{{sess.instructor}}</p>
+          <p class="dots" (click)="sessDet(sess)">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+          <div tappable class="bookSection" (click)="goBook(sess)" item-end>Book</div>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'Drops'">
+        <ion-item-divider color="light">Cairo Branch</ion-item-divider>
+      <ion-card *ngFor="let drop of dropins" (click)="sessDet(drop)">
+        <img src="{{drop.img}}" />
+        <ion-card-content>
+          <ion-card-title>
+            {{drop.name}}
+          </ion-card-title>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+          </p>
+          <br>
+          <span ion-text color="secondary" text-right>12/12/2017</span>
+        </ion-card-content>
+      </ion-card>
+      <ion-item-divider color="light">Giza Branch</ion-item-divider>
+      <ion-card *ngFor="let drop of dropins" (click)="sessDet(drop)">
+          <img src="{{drop.img}}" />
+          <ion-card-content>
+            <ion-card-title>
+              {{drop.name}}
+            </ion-card-title>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+            </p>
+            <br>
+            <span ion-text color="secondary" text-right>12/12/2017</span>
+          </ion-card-content>
+        </ion-card>
+      
+        <ion-item-divider text-center color="dark">Create Event</ion-item-divider>
+      <ion-list>
+        <ion-item>
+          <ion-label color="secondary" stacked>Event Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary" stacked>Email</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary" stacked>Location</ion-label>
+          <ion-select>
+            <ion-option>Heliopolis</ion-option>
+            <ion-option>Zamalek</ion-option>
+            <ion-option>Giza</ion-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="secondary" stacked>Date</ion-label>
+          <ion-input type="date"></ion-input>
+        </ion-item>
+        <div padding text-center>
+          <button class="rounded" ion-button block color="secondary">Submit</button>
+        </div>
+      </ion-list>
+    </ion-list>
+  </div>
+
+  <!-- <ion-list>
+        <ion-item *ngFor="let prog of programs" (click)="progDet(prog)">
+            <ion-thumbnail item-start>
+                <img src="{{prog.img}}">
+            </ion-thumbnail>
+            <h2>{{prog.name}}</h2>
+            <p>Next Session : 01/09/2017</p>
+            <span class="smText" item-end>01/01/2017</span>
+        </ion-item>
+    </ion-list> -->
+</ion-content>
+
+<!-- <ion-footer>
+    <button ion-button block color="primary" (click)="addEvent()" >Create Event</button>
+</ion-footer> -->

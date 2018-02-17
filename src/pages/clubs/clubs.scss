@@ -1,0 +1,55 @@
+page-clubs {
+    .bookSection {
+        margin: 0px !important;
+        padding: 10px 20px;
+        color: white;
+        background: #d12c75;
+    }
+    .item-inner {
+        padding-right: 0px !important;
+    }
+    .classes {
+        ion-card {
+            img {
+                border-radius: 50%;
+                width: 80px !important;
+                height: 80px !important;
+                padding: 10px;
+                display: inline-block;
+            }
+        }
+    }
+    .wrapper {
+        background: #EFEFEF;
+        box-shadow: 1px 1px 10px #999;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        margin-bottom: 20px !important;
+        width: auto;
+        padding-top: 5px;
+    }
+    .scrolls {
+        padding: 5px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: auto;
+        white-space: nowrap
+    }
+    .segment-ios .segment-button {
+        background-color: transparent !important;
+        color: color($colors, danger) !important;
+        border: 1px solid white !important;
+    }
+    .segment-ios .segment-button.segment-activated {
+        border-bottom: 2px solid color($colors, danger)!important;
+    }
+    ion-icon {
+        font-size: 100px;
+        color: darkgray;
+        padding-bottom: 20px;
+    }
+    ion-item p {
+        white-space: normal;
+    }
+}

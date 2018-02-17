@@ -1,0 +1,46 @@
+<!--
+  Generated template for the AddeventPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar style="background: url('img/purple.png') !important;color:white !important;">
+    <ion-title style="background: url('img/purple.png') !important;color:white !important;">Create an event</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+          <ion-label color="danger" stacked>Event Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+    
+      <ion-item>
+        <ion-label color="danger" stacked>Email</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label color="danger" stacked>Location</ion-label>
+        <ion-select>
+          <ion-option>Heliopolis</ion-option>
+          <ion-option>Zamalek</ion-option>
+          <ion-option>Giza</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label color="danger" stacked>Date</ion-label>
+        <ion-input type="date"></ion-input>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+  <button ion-button block color="dark" (click)="submit()">Submit</button>
+</ion-footer>

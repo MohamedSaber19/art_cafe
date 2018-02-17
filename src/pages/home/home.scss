@@ -1,3 +1,26 @@
 page-home {
-
+    .toolbar-ios ion-title {
+        background: url('img/purple.png') !important;
+    }
+    ion-navbar {
+        .button-inner {
+            color: white;
+        }
+    }
+    ion-card {
+        img {
+            border-radius: 50%;
+            width: 80px !important;
+            height: 80px !important;
+            padding: 10px;
+            display: inline-block;
+        }
+    }
+    .recentQues {
+        height: 35%;
+    }
+    .myTitle {
+        color: #d12c75;
+        margin-bottom: 0px;
+    }
 }
